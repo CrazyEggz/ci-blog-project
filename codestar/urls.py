@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("blog.urls"), name = "blog-urls"), # name attribute is not supposed to be used here
+    path('summernote/', include('django_summernote.urls')),
+    path('', include("blog.urls"), name = "blog-urls"), # name attribute is not supposed to be used here. Name shoud be used for a specific url pattern rather than "include"
 ]
